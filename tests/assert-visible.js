@@ -5,6 +5,7 @@ module.exports = {
 
         browser.click('#make-header-invisible')
         browser.assert.not.visible('#assert-verify-header')
+        browser.end()
     },
     'Expect Visible': function (browser) {
         browser.url('http://tutorials.actionqa.com/yt/nw/asserts/assert-vs-verify.html')
@@ -13,5 +14,6 @@ module.exports = {
 
         browser.click('#make-header-invisible')
         browser.expect.element('#assert-verify-header').to.not.be.visible
+        browser.end()
     }
 }
